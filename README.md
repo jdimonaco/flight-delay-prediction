@@ -3,6 +3,7 @@
 The objective of this project is to predict whether a flight will be delayed using classification models trained on historical flight data. Delays can significantly impact both passenger experience and cargo logistics, leading to financial losses and disrupted operations. Early prediction enables airlines and logistics providers to make proactive, data-driven decisions.
 
 🧠 ** Models Used **
+
 A progressive modelling approach was adopted:
 
 **Decision Tree:** Used as a baseline for initial feature analysis and interpretability.
@@ -12,6 +13,7 @@ A progressive modelling approach was adopted:
 **XGBoost:** Achieved the highest accuracy and ROC-AUC but was not selected due to its complexity and lower interpretability.
 
 ✅ **Final Model:** Random Forest
+
 Although XGBoost slightly outperformed other models in metrics, the Random Forest model was selected for the following reasons:
 
 High predictive performance (Accuracy: 99.44%, ROC-AUC: 0.999)
@@ -25,6 +27,7 @@ Easier hyperparameter tuning, reducing risk in production environments
 Improved stakeholder trust through explainability and transparency
 
 📊 **Key Features Engineered**
+
 Flight Duration (including ground time)
 
 Cargo Density
@@ -49,6 +52,7 @@ Learning Curves
 Cross-Validation Accuracy Distribution
 
 🔍 **Key Takeaways**
+
 All three models showed exceptional predictive performance.
 
 Random Forest was selected for its balance between accuracy, interpretability, and efficiency.
@@ -58,6 +62,7 @@ Feature importance enabled insights into key drivers of delays, such as cargo we
 XGBoost achieved the highest metrics but required more complex tuning and lacked interpretability for business users.
 
 ⚠️ **Considerations**
+
 While model performance was strong, it is important to consider:
 
 The high accuracy may be partially due to the dataset structure, which could oversimplify real-world complexity.
