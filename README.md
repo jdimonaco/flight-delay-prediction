@@ -1,5 +1,5 @@
 
-🚀** Project Overview **
+🚀**Project Overview**
 The objective of this project is to predict whether a flight will be delayed using classification models trained on historical flight data. Delays can significantly impact both passenger experience and cargo logistics, leading to financial losses and disrupted operations. Early prediction enables airlines and logistics providers to make proactive, data-driven decisions.
 
 🧠 ** Models Used **
