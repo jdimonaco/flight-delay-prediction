@@ -70,3 +70,7 @@ The high accuracy may be partially due to the dataset structure, which could ove
 External validation is recommended for future work to assess generalisability.
 
 Continuous model monitoring and retraining should be implemented in live environments.
+
+📌 **Disclaimer**
+
+This project was adapted for research purposes only, using synthetic data to simulate real-world flight and cargo scenarios. The model and its predictions are not intended for operational use without further validation. Accuracy and outcomes depend on the structure and assumptions within the dataset, and may not reflect real-world conditions
