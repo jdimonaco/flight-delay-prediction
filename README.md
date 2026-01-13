@@ -16,40 +16,41 @@ A progressive modelling approach was adopted:
 
 Although XGBoost slightly outperformed other models in metrics, the Random Forest model was selected for the following reasons:
 
-High predictive performance (Accuracy: 99.44%, ROC-AUC: 0.999)
+- High predictive performance (Accuracy: 99.44%, ROC-AUC: 0.999)
 
-Clear feature importance output, aiding stakeholder understanding and decision-making
+- Clear feature importance output, aiding stakeholder understanding and decision-making
 
-Lower computational cost and faster training time
+- Lower computational cost and faster training time
 
-Easier hyperparameter tuning, reducing risk in production environments
+- Easier hyperparameter tuning, reducing risk in production environments
 
-Improved stakeholder trust through explainability and transparency
+- Improved stakeholder trust through explainability and transparency
 
 📊 **Key Features Engineered**
 
-Flight Duration (including ground time)
+- Flight Duration (including ground time)
 
-Cargo Density
+- Cargo Density
 
-Departure Time Categories (e.g., Morning, Afternoon)
+- Departure Time Categories (e.g., Morning, Afternoon)
 
-Delay Severity Classification
+- Delay Severity Classification
 
 These features enhance the model’s ability to capture operational complexity and real-world factors contributing to delays.
 
 📈 **Evaluation Metrics**
-Accuracy
 
-Precision / Recall / F1-Score
+- Accuracy
 
-ROC-AUC
+-  / Recall / F1-Score
 
-Confusion Matrix
+- ROC-AUC
 
-Learning Curves
+- Confusion Matrix
 
-Cross-Validation Accuracy Distribution
+- Learning Curves
+
+- Cross-Validation Accuracy Distribution
 
 🔍 **Key Takeaways**
 
@@ -65,11 +66,11 @@ XGBoost achieved the highest metrics but required more complex tuning and lacked
 
 While model performance was strong, it is important to consider:
 
-The high accuracy may be partially due to the dataset structure, which could oversimplify real-world complexity.
+- The high accuracy may be partially due to the dataset structure, which could oversimplify real-world complexity.
 
-External validation is recommended for future work to assess generalisability.
+- External validation is recommended for future work to assess generalisability.
 
-Continuous model monitoring and retraining should be implemented in live environments.
+- Continuous model monitoring and retraining should be implemented in live environments.
 
 📌 **Disclaimer**
 
