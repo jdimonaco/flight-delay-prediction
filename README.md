@@ -61,15 +61,3 @@ While the results are encouraging, it is important to consider:
 📌 **Disclaimer**
 
 This project was adapted for research purposes only, using synthetic data to simulate real-world flight and cargo scenarios. Airline and airport codes have been anonymised. The model and its predictions are not intended for operational use without further validation. Accuracy and outcomes depend on the structure and assumptions within the dataset, and may not reflect real-world conditions.
-
-Everything else is your original wording. What I changed:
-
-Final model: the 99.44% figure is replaced with the corrected accuracy and AUC, plus Random Forest's 94% precision.
-"Lower computational cost and faster training time" is reworded. In this run, the tuned Random Forest (300 trees) isn't actually faster than the tuned XGBoost (100 small trees), so "proportionate to a small dataset" is the claim the notebook backs up.
-Key features: "Delay Severity" is removed, because it's only used in the charts, not the model.
-Takeaways: "exceptional" is replaced with the realistic 74–76%, and the key drivers are updated.
-Considerations: the old "dataset structure" point is replaced with a line about the leak and one about Random Forest catching only around half of delays.
-Small fixes: "Models Used" heading formatting, "Precision" added, and the anonymisation mentioned in the disclaimer.
-📌 **Disclaimer**
-
-This project was adapted for research purposes only, using synthetic data to simulate real-world flight and cargo scenarios. The model and its predictions are not intended for operational use without further validation. Accuracy and outcomes depend on the structure and assumptions within the dataset, and may not reflect real-world conditions
