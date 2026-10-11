@@ -1,8 +1,8 @@
+🚀 **Project Overview**
 
-🚀**Project Overview**
 The objective of this project is to predict whether a flight will be delayed using classification models trained on historical flight data. Delays can significantly impact both passenger experience and cargo logistics, leading to financial losses and disrupted operations. Early prediction enables airlines and logistics providers to make proactive, data-driven decisions.
 
-🧠 ** Models Used **
+🧠 **Models Used**
 
 A progressive modelling approach was adopted:
 
@@ -12,66 +12,64 @@ A progressive modelling approach was adopted:
 
 **XGBoost:** Achieved the highest accuracy and ROC-AUC but was not selected due to its complexity and lower interpretability.
 
-✅ **Final Model:** Random Forest
+✅ **Final Model: Random Forest**
 
 Although XGBoost slightly outperformed other models in metrics, the Random Forest model was selected for the following reasons:
 
-- High predictive performance (Accuracy: 99.44%, ROC-AUC: 0.999)
-
+- Strong predictive performance (Accuracy: 73.8%, ROC-AUC: 0.84), with the highest precision of the three models (93.6%), so flagged flights are almost always genuinely at risk
 - Clear feature importance output, aiding stakeholder understanding and decision-making
-
-- Lower computational cost and faster training time
-
+- Proportionate to a small dataset: robust with modest tuning, and simple to retrain and maintain
 - Easier hyperparameter tuning, reducing risk in production environments
-
 - Improved stakeholder trust through explainability and transparency
 
 📊 **Key Features Engineered**
 
-- Flight Duration (including ground time)
-
+- Flight Duration (planned, including ground time)
 - Cargo Density
+- Departure Time Categories (e.g., Morning, Afternoon), based on the planned departure time
 
-- Departure Time Categories (e.g., Morning, Afternoon)
-
-- Delay Severity Classification
-
-These features enhance the model’s ability to capture operational complexity and real-world factors contributing to delays.
+These features enhance the model's ability to capture operational complexity and real-world factors contributing to delays.
 
 📈 **Evaluation Metrics**
 
 - Accuracy
-
--  / Recall / F1-Score
-
+- Precision / Recall / F1-Score
 - ROC-AUC
-
 - Confusion Matrix
-
 - Learning Curves
-
 - Cross-Validation Accuracy Distribution
 
 🔍 **Key Takeaways**
 
-All three models showed exceptional predictive performance.
+All three models achieved realistic performance (74–76% accuracy) using only information available before departure.
 
 Random Forest was selected for its balance between accuracy, interpretability, and efficiency.
 
-Feature importance enabled insights into key drivers of delays, such as cargo weight, flight duration, and departure time.
+Feature importance enabled insights into key drivers of delays, such as flight duration, distance, and cargo weight.
 
 XGBoost achieved the highest metrics but required more complex tuning and lacked interpretability for business users.
 
 ⚠️ **Considerations**
 
-While model performance was strong, it is important to consider:
+While the results are encouraging, it is important to consider:
 
-- The high accuracy may be partially due to the dataset structure, which could oversimplify real-world complexity.
-
+- An earlier version of this project reported over 99% accuracy due to data leakage (features that are only known after a delay has occurred). These were removed and all results re-run; see the version note at the top of the notebook.
+- At the default threshold, Random Forest catches around half of delayed flights. The threshold can be adjusted if missing a delay is more costly than a false alarm.
 - External validation is recommended for future work to assess generalisability.
-
 - Continuous model monitoring and retraining should be implemented in live environments.
 
+📌 **Disclaimer**
+
+This project was adapted for research purposes only, using synthetic data to simulate real-world flight and cargo scenarios. Airline and airport codes have been anonymised. The model and its predictions are not intended for operational use without further validation. Accuracy and outcomes depend on the structure and assumptions within the dataset, and may not reflect real-world conditions.
+
+Everything else is your original wording. What I changed:
+
+Final model: the 99.44% figure is replaced with the corrected accuracy and AUC, plus Random Forest's 94% precision.
+"Lower computational cost and faster training time" is reworded. In this run, the tuned Random Forest (300 trees) isn't actually faster than the tuned XGBoost (100 small trees), so "proportionate to a small dataset" is the claim the notebook backs up.
+Key features: "Delay Severity" is removed, because it's only used in the charts, not the model.
+Takeaways: "exceptional" is replaced with the realistic 74–76%, and the key drivers are updated.
+Considerations: the old "dataset structure" point is replaced with a line about the leak and one about Random Forest catching only around half of delays.
+Small fixes: "Models Used" heading formatting, "Precision" added, and the anonymisation mentioned in the disclaimer.
 📌 **Disclaimer**
 
 This project was adapted for research purposes only, using synthetic data to simulate real-world flight and cargo scenarios. The model and its predictions are not intended for operational use without further validation. Accuracy and outcomes depend on the structure and assumptions within the dataset, and may not reflect real-world conditions
